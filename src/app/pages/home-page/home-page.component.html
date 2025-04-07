@@ -1,1 +1,59 @@
-<p>home-page works!</p>
+<div class="min-h-screen bg-slate-950 flex items-center justify-center p-2 sm:p-4">
+    <!-- Chat Container -->
+    <div class="w-full max-w-[95%] sm:max-w-3xl mx-auto flex flex-col h-[98vh] sm:h-[95vh] md:h-[90vh] lg:h-[85vh] bg-slate-900 border-2 border-slate-800 shadow-2xl relative">
+        <!-- Header -->
+        <div class="p-3 sm:p-4 bg-slate-900 text-slate-300 border-b-2 border-slate-800 flex items-center justify-between relative z-10">
+            <div class="flex items-center gap-2 sm:gap-3">
+                <div class="w-8 sm:w-12 h-1 bg-slate-700 rotate-45 absolute -top-1 -left-1"></div>
+                <span class="text-xs sm:text-sm text-slate-500 font-mono">xAI://</span>
+                <h1 class="text-base sm:text-lg md:text-xl font-bold">GROK_3</h1>
+            </div>
+            <div class="flex items-center gap-1 text-xs sm:text-sm text-slate-600 font-mono">
+                <span class="px-1 bg-slate-800 border border-slate-700">ACTIVE</span>
+                <span class="px-1 bg-slate-800 border border-slate-700 hidden sm:inline">04/07/25</span>
+            </div>
+        </div>
+        <!-- Messages -->
+        <div id="chatbox" class="flex-1 p-3 sm:p-4 md:p-6 overflow-y-auto space-y-4 sm:space-y-6 bg-slate-900 relative">
+            <!-- Diagonal Accent -->
+            <div class="absolute top-0 right-0 w-12 sm:w-16 h-12 sm:h-16 bg-slate-800 border-b-2 border-l-2 border-slate-700 rotate-45 translate-x-6 sm:translate-x-8 -translate-y-6 sm:-translate-y-8"></div>
+            <!-- Bot Message -->
+            <div class="flex items-start gap-2 sm:gap-4 relative">
+                <div class="w-8 sm:w-12 md:w-14 h-2 bg-slate-700 mt-3 sm:mt-4"></div>
+                <div class="max-w-[85%] sm:max-w-[80%] md:max-w-md bg-slate-800 p-3 sm:p-4 border-t-2 border-slate-700 text-slate-300 relative">
+                    <p class="text-xs sm:text-sm md:text-base font-mono">> INITIALIZING... Ready. How can I assist?</p>
+                    <div class="absolute -bottom-2 left-0 w-3 sm:w-4 h-2 bg-slate-700"></div>
+                </div>
+            </div>
+            <!-- User Message -->
+            <div class="flex justify-end items-start gap-2 sm:gap-4 relative">
+                <div class="max-w-[85%] sm:max-w-[80%] md:max-w-md bg-slate-800 p-3 sm:p-4 border-b-2 border-slate-700 text-slate-300 relative">
+                    <p class="text-xs sm:text-sm md:text-base font-mono">> Testing input. Confirm operational status.</p>
+                    <div class="absolute -top-2 right-0 w-3 sm:w-4 h-2 bg-slate-700"></div>
+                </div>
+                <div class="w-8 sm:w-12 md:w-14 h-2 bg-slate-700 mt-3 sm:mt-4"></div>
+            </div>
+        </div>
+        <!-- Input Area -->
+        <form id="chat-form" class="p-3 sm:p-4 md:p-6 bg-slate-900 border-t-2 border-slate-800 flex flex-col gap-3 sm:flex-row sm:gap-4 relative">
+            <div class="flex-1 flex items-center bg-slate-800 border-2 border-slate-700">
+                <div class="w-1 sm:w-2 h-6 sm:h-8 bg-slate-700"></div>
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    class="flex-1 p-2 sm:p-3 md:p-3 bg-transparent text-slate-300 focus:outline-none placeholder-slate-600 font-mono text-xs sm:text-sm md:text-base overflow-hidden" 
+                    placeholder="> INPUT_QUERY"
+                >
+                <div class="w-px h-4 sm:h-6 bg-slate-700"></div>
+                <span class="px-1 sm:px-2 text-xs text-slate-500 font-mono">CMD</span>
+            </div>
+            <button 
+                type="submit" 
+                class="bg-slate-800 px-4 sm:px-6 py-2 sm:py-3 border-2 border-slate-700 text-slate-300 hover:bg-slate-700 font-mono text-xs sm:text-sm md:text-sm uppercase flex items-center justify-center gap-1 sm:gap-2 shrink-0"
+            >
+                <div class="w-1 h-3 sm:h-4 bg-slate-600"></div>
+                EXECUTE
+            </button>
+        </form>
+    </div>
+</div>
